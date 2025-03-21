@@ -1,17 +1,13 @@
 import { useState, useMemo, useCallback, memo } from 'react';
+import { useDispatch , useSelector } from "react-redux";
+import { decrement, increment } from "../Store/Reducer";
 import ChildComponent from './ChildComponent';
 
 function ParentComponent() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = useCallback(() => {
-    setCount(c => c + 1);
-  }, []); // Empty dependency array since it doesn't depend on any values
-
+  const count = useSelector((state) => state.counter.value);
   return ( 
   <>
     <h1>Count: {count}</h1>
-    <ChildComponent onClick={handleClick} />
     </>
     )
 }

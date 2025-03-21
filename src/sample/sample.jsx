@@ -428,11 +428,11 @@ describe('Counter Component', () => {
     
     // Wait for loading to complete
     expect(screen.getByText('Loading...')).toBeInTheDocument();
-    
-    // Wait for data to appear
-    const userName = await screen.findByText('John Doe');
-    expect(userName).toBeInTheDocument();
-  });
+      
+      // Wait for data to appear
+      const userName = await screen.findByText('John Doe');
+      expect(userName).toBeInTheDocument();
+    });
 });
 
 // 13. Redux State Management

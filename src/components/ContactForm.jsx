@@ -13,6 +13,26 @@ function ContactForm() {
         [name]: value
       }));
     };
+
+    const calca = (x,a,b) => {
+      
+      if((a==0 || b==0 ) && (x=='div')){
+        return 'Invalid input';
+      }
+
+      switch(x){
+        case 'add':
+          return add(a,b);
+        case 'sub':
+          return sub(a,b);
+        case 'mul':
+          return mul(a,b);
+        case 'div':
+          return div(a,b);
+      }
+    }
+    
+
   
     const handleSubmit = (e) => {
       //e.preventDefault();
@@ -44,6 +64,6 @@ function ContactForm() {
         <button type="submit">Submit</button>
       </form>
     );
-  }
+}
 
   export default ContactForm;

@@ -23,7 +23,7 @@ function UserCard({userid}) {
             setUser(null);
         }
     }
-    , [user]);
+    , [userid]);
 
 
 
